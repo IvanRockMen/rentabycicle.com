@@ -13,3 +13,5 @@ services:
       PGDATA: /var/lib/postgresql/data/pgdata
     restart:
       always
+  app:
+    image:
