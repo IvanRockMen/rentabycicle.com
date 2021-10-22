@@ -21,6 +21,7 @@ def error_400(request, extention):
     #return render(request, "main/error400.html", data)
 
 def error_500(request):
+
     data = {}
     return HttpResponse("Error 500")
     #return render(request, "main/error500.html", data)

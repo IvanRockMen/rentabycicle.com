@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = os.getenv("SE")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -85,11 +85,11 @@ DATABASES = {
 
     #'postgres': {
     #    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #    'NAME': 'rentabycicle_db',
-    #    'USER': 'rentabycicle_user',
-    #    'PASSWORD': '_xMzbW7e',
-    #    'HOST': '127.0.0.1',
-    #    'PORT': '5432',
+    #    'NAME': os.getenv('POSTGRES_DB'),
+    #    'USER': os.getenv('POSTGRES_USER'),
+    #    'PASSWORD': os.getenv('POSTGRES_PASS'),
+    #    'HOST': os.getenv('POSTGRES_HOST'),
+    #    'PORT': os.getenv('POSTGRES_PORT'),
     #}
 
 }
