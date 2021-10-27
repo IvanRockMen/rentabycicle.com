@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}All bycicles{% endblock %}
+
+{% block content %}
+<h1>Bycicles</h1>
+{% if bycicles != None %}
+	{% for bycicle in bycicles %}
+	<div>
+		<a href="{% url 'bycicle:bycicle' bycicle.id %}">
+			<img alt="Bycicle photo">
+			<h2>{{bycicle.bycicle_company}}</h2>
+		</a>
+	</div>
+	{% endfor %}
+{% else %}
+Bycicles not found
+{% endif %}
+{% endblock %}

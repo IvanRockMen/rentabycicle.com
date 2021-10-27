@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('rest_framework.urls')),
     path('', include('main.urls')),
+    path('bycicle/', include('bycicle.urls')),
 ]
 
 handler404 = 'main.views.error_404'

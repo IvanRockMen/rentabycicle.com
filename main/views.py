@@ -1,27 +1,25 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render
 
+from code.base_view import base_view
+
 # Create your views here.
+@base_view
 def index(request):
-    return HttpResponse("Main Page")
+    return render(request, 'main/index.html')
 
-def error_404(request, extention):
-    data = {}
-    return HttpResponse("Error 404")
-    #return render(request, "main/error404.html", data)
+@base_view
+def error_404(request, exception):
+    return render(request, "main/error404.html")
 
-def error_403(request, extention):
-    data = {}
-    return HttpResponse("Error 403")
-    #return render(request, "main/error403.html", data)
+@base_view
+def error_403(request, exception):
+    return render(request, "main/error403.html")
 
-def error_400(request, extention):
-    data = {}
-    return HttpResponse("Error 400")
-    #return render(request, "main/error400.html", data)
+@base_view
+def error_400(request, exception):
+    return render(request, "main/error400.html")
 
+@base_view
 def error_500(request):
-
-    data = {}
-    return HttpResponse("Error 500")
-    #return render(request, "main/error500.html", data)
+    return render(request, "main/error500.html")

@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "rentabycicle"
+version = "0.1.0"
+description = "django web application"
+authors = ["Ivan Bartenev <bartenev.ivan.a@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^3.2.8"
+djangorestframework = "^3.12.4"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^4.0.1"
+python-dotenv = "^0.19.1"
+editorconfig-checker = "^2.3.54"
+pytest = "^6.2.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
