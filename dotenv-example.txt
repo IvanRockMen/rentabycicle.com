@@ -1,0 +1,9 @@
+SECRET_KEY = secret
+POSTGRES_DB = database_name
+POSTGRES_PASS = database_password
+POSTGRES_USER = database_user
+POSTGRES_HOST = database_ip
+POSTGRES_PORT = database_port
+DEBUG = 0
+
+POSTGRES_ENGINE = database_engine

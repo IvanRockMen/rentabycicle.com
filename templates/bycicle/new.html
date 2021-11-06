@@ -2,5 +2,9 @@
 {% block title %}Add new Bycicle{% endblock %}
 
 {% block content %}
-
+	<form action="{% url 'bycicle:add' %}" method="post">
+		{% csrf_token %}
+		<input type="submit" value="Выполнить">
+		<input type="reset" value="Сбросить">
+	</form>
 {% endblock %}

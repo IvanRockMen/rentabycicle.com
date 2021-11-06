@@ -1,0 +1,26 @@
+version: '3.10'
+
+services:
+
+  app:
+    container_name: app
+    build:
+
+  db:
+    container_name: db
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgres/data/pgdata
+    restart: always
+
+
+  nginx:
+    container_name: nginx
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d

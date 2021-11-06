@@ -1,6 +1,6 @@
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import response
-from django.http.response import HttpResponse, HttpResponseNotFound
+from django.http.response import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.shortcuts import render
 
 from code.base_view import base_view
@@ -31,4 +31,4 @@ def bycicle(request, bycicle_id:int):
 
 @base_view
 def add(request):
-    pass
+    return HttpResponseRedirect("/bycicle")
